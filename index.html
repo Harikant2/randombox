@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="RandomBox — हर क्लिक पर कुछ unexpected.">
+  <title>RandomBox 🎲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span>🎲</span> RandomBox</a>
+    <nav>
+      <a href="#categories">Categories</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">✨ हर क्लिक पर कुछ नया</div>
+      <h1>कुछ भी हो सकता है<span>…</span></h1>
+      <p>Category चुनो या सीधे Surprise दबाओ।</p>
+
+      <div class="result-card" id="resultCard">
+        <div class="result-type" id="resultType">SURPRISE</div>
+        <div class="result-emoji" id="resultEmoji">🎁</div>
+        <h2 id="resultTitle">क्या आज किस्मत कुछ मजेदार देगी?</h2>
+        <p id="resultText">नीचे वाला बटन दबाओ और पता लगाओ।</p>
+        <div class="actions">
+          <button class="primary" id="randomBtn">🎲 RANDOMIZE</button>
+          <button class="ghost" id="copyBtn">📋 Copy</button>
+        </div>
+      </div>
+
+      <div class="quick">
+        <button data-cat="surprise">🎁 Surprise</button>
+        <button data-cat="fun">😂 Fun</button>
+        <button data-cat="brain">🧠 Brain</button>
+        <button data-cat="facts">🤯 Facts</button>
+        <button data-cat="challenge">🎯 Challenge</button>
+        <button data-cat="knowledge">📚 Knowledge</button>
+        <button data-cat="question">💭 Question</button>
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">EXPLORE</span>
+          <h2>अपना mood चुनो</h2>
+        </div>
+        <p>हर category में अलग तरह की चीज़ें मिलेंगी।</p>
+      </div>
+      <div class="category-grid">
+        <button class="category" data-cat="fun"><b>😂</b><span>Fun</span><small>मज़ेदार prompts</small></button>
+        <button class="category" data-cat="brain"><b>🧠</b><span>Brain</span><small>सोचने वाले सवाल</small></button>
+        <button class="category" data-cat="facts"><b>🤯</b><span>Weird Facts</span><small>अजीब लेकिन interesting</small></button>
+        <button class="category" data-cat="challenge"><b>🎯</b><span>Challenge</span><small>छोटे challenges</small></button>
+        <button class="category" data-cat="knowledge"><b>📚</b><span>Knowledge</span><small>नई जानकारी</small></button>
+        <button class="category" data-cat="question"><b>💭</b><span>Question</span><small>बात शुरू करने वाले सवाल</small></button>
+      </div>
+    </section>
+
+    <section class="daily">
+      <div>
+        <span class="eyebrow">COMING NEXT</span>
+        <h2>Daily Random 🔥</h2>
+        <p>हर दिन एक नया featured item, streaks और favourites — ये features बाद में जोड़ सकते हैं।</p>
+      </div>
+      <a href="admin.html" class="outline">Content manage करें →</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> RandomBox</span>
+    <span>Made to grow 🚀</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

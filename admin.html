@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RandomBox — Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span>🎲</span> RandomBox</a>
+    <a href="index.html">← Website</a>
+  </header>
+
+  <main class="admin">
+    <section class="admin-head">
+      <div>
+        <span class="eyebrow">ADMIN</span>
+        <h1>Content Manager</h1>
+        <p>अभी यह browser में local data के साथ चलता है। बाद में इसे आपके अपने database से जोड़ सकते हैं।</p>
+      </div>
+      <button class="ghost" id="resetBtn">↺ Demo Reset</button>
+    </section>
+
+    <section class="panel">
+      <h2>➕ नया Random Item</h2>
+      <form id="itemForm" class="form-grid">
+        <label>Category
+          <select id="category" required>
+            <option value="fun">😂 Fun</option>
+            <option value="brain">🧠 Brain</option>
+            <option value="facts">🤯 Facts</option>
+            <option value="challenge">🎯 Challenge</option>
+            <option value="knowledge">📚 Knowledge</option>
+            <option value="question">💭 Question</option>
+          </select>
+        </label>
+        <label>Emoji <input id="emoji" maxlength="4" placeholder="🎲" required></label>
+        <label class="wide">Title <input id="title" maxlength="90" placeholder="एक छोटा title" required></label>
+        <label class="wide">Text <textarea id="text" rows="4" maxlength="400" placeholder="यहाँ आपका content..." required></textarea></label>
+        <button class="primary wide" type="submit">➕ Add Item</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="list-head"><h2>📦 Items</h2><span id="count"></span></div>
+      <div id="items"></div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
